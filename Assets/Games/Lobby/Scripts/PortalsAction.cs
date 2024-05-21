@@ -4,7 +4,6 @@ public class PortalsAction : MonoBehaviour
 {
     [SerializeField] private GameObject portalBlockParty;
     [SerializeField] private GameObject portalDoll;
-    [SerializeField] private GameObject portalRace;
     [SerializeField] private GameObject portalUltimateKnockout;
 
     void Start()
@@ -16,13 +15,11 @@ public class PortalsAction : MonoBehaviour
 
         BoxCollider colliderBlockParty = portalBlockParty.AddComponent<BoxCollider>();
         BoxCollider colliderDoll = portalDoll.AddComponent<BoxCollider>();
-        BoxCollider colliderRace = portalRace.AddComponent<BoxCollider>();
         BoxCollider colliderUltimateKnockout = portalUltimateKnockout.AddComponent<BoxCollider>();
 
 
         colliderBlockParty.isTrigger = true;
         colliderDoll.isTrigger = true;
-        colliderRace.isTrigger = true;
         colliderUltimateKnockout.isTrigger = true;
 
 
@@ -35,9 +32,6 @@ public class PortalsAction : MonoBehaviour
         triggerForDoll.NameGame = "Doll";
         triggerForDoll.Multiplayer = true;
 
-        TriggerAction triggerForRace = portalRace.AddComponent<TriggerAction>();
-        triggerForRace.NameGame = "Track";
-        triggerForRace.Multiplayer = false;
 
         TriggerAction triggerForUltimateKnockout = portalUltimateKnockout.AddComponent<TriggerAction>();
         triggerForUltimateKnockout.NameGame = "UltimateKnockout";
